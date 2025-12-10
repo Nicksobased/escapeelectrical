@@ -228,7 +228,7 @@ function goToCafeteria() {
 }
 
 function goToReactor() {
-  window.location.href = "https://7gg8pf.csb.app/";
+  window.location.href = "https://github.com/doribolas/escape3.git";
 }
 
 function goToOxygen() {
@@ -335,3 +335,4 @@ const countdown = setInterval(() => {
     triggerJumpscare();
   }
 }, 100); // every 100ms (0.1 sec)
+
