@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="darkness"></div>
+
+    <div class="row-1">
+      <div class="box-7">
+        <img src="images/newnote.png" id="noti" />
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="mappy">
+        <img
+          src="images/newmap.png"
+          class="corner-img"
+          id="open"
+          onclick="toggleMap()"
+        />
+      </div>
+    </div>
+
+    <div class="row-1">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box center-content">
+        <div class="hitbox">
+          <img
+            src="images/five.png"
+            id="one"
+            class="hidden-number"
+            onclick="showImage()"
+          />
+        </div>
+      </div>
+      <div class=""></div>
+    </div>
+
+    <div class="row"></div>
+
+    <div class="row-1">
+      <div class="box">
+        <img
+          src="images/door.png"
+          class="door-map bounce-on-click"
+          id="doorr"
+          onclick="showModal()"
+        />
+      </div>
+      <div class="box">
+        <div class="box"></div>
+      </div>
+      <div class="box"></div>
+      <div class="box center-content">
+        <div class="hitbox">
+          <img
+            src="images/nine.png"
+            id="nine9"
+            class="hidden-number"
+            onclick="showImage2()"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="middle-1">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box-3 center-content">
+        <div class="hitbox">
+          <img
+            src="images/two.png"
+            id="threee"
+            class="hidden-number"
+            onclick="showImage3()"
+          />
+        </div>
+      </div>
+      <div class="box"></div>
+    </div>
+
+    <div class="bottom">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box center-content-1">
+        <img src="" class="bringfowards" id="onesquare" />
+      </div>
+      <div class="box center-content-1">
+        <img src="" class="bringfowards" id="yessquare" />
+      </div>
+      <div class="box center-content-1">
+        <img src="" class="bringfowards" id="threequare" />
+      </div>
+    </div>
+
+    <div class="modal center-content" id="myModal">
+      <span class="close" onclick="hideModal()">
+        <img
+          src="images/button.png"
+          alt="Close"
+          style="width: 80px; height: auto"
+        />
+      </span>
+
+      <div class="modal-body center-content">
+        <div class="toprow">
+          <div class="col center-content-1">
+            <img
+              src="images/one.png"
+              class="bounce-on-click"
+              id="slot1"
+              onclick="change1()"
+            />
+          </div>
+          <div class="col center-content-1">
+            <img
+              src="images/one.png"
+              class="bounce-on-click"
+              id="slot2"
+              onclick="change2()"
+            />
+          </div>
+          <div class="col center-content-1">
+            <img
+              src="images/one.png"
+              class="bounce-on-click"
+              id="slot3"
+              onclick="change3()"
+            />
+          </div>
+        </div>
+
+        <div class="botrow white center-content-1">
+          <img
+            src="images/emergency.gif"
+            class="bounce-on-click"
+            onclick="CheckJackpot()"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Map Modal -->
+    <div class="modal-map" id="myMap">
+      <span class="close-map" onclick="toggleMap()">&times;</span>
+      <div class="modal-body-map">
+        <div
+          class="reactor-map"
+          style="top: 350px; left: 100px"
+          onclick="goToReactor()"
+        ></div>
+        <div class="oxygen-map" style="top: 400px; left: 1250px"></div>
+        <div class="navigation-map" style="top: 390px; left: 1650px"></div>
+        <div class="shields-map" style="top: 720px; left: 1350px"></div>
+        <div class="communications-map" style="top: 850px; left: 1130px"></div>
+        <div class="storage-map" style="top: 700px; left: 850px"></div>
+        <div class="security-map" style="top: 400px; left: 400px"></div>
+        <div class="medbay-map" style="top: 340px; left: 600px"></div>
+        <div class="upper-map" style="top: 160px; left: 250px"></div>
+        <div class="lower-map" style="top: 690px; left: 250px"></div>
+      </div>
+    </div>
+
+    <div class="modal2" id="completed">
+      <h2>Go to Reactor Next</h2>
+    </div>
+
+    <div
+      id="jumpscareModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+      "
+    >
+      <img
+        src="images/your-jumpscare-image.png"
+        style="width: 1000%; max-width: 5000px"
+      />
+    </div>
+
+    <h2 id="timerText">45.0</h2>
+
+    <audio src="sounds/vent.wav" id="vent"></audio>
+    <audio src="sounds/ambient.mp3" id="Ambient"></audio>
+    <audio src="sounds/Among-Open.mp3" id="click"></audio>
+    <audio src="sounds/type.wav" id="type"></audio>
+    <audio src="sounds/among-correct.mp3" id="complete"></audio>
+    <audio src="sounds/among-typing.mp3" id="typing"></audio>
+    <audio id="wrong" src="sounds/scream.mp3"></audio>
+    <audio id="scareSound" src="sounds/sabotage.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

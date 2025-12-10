@@ -1,0 +1,523 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  background-image: url("images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: url("images/cursors.png") 40 50, auto;
+}
+
+.bounce-on-click:active {
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.row {
+  height: calc(100% / 6);
+  width: 100%;
+  display: flex;
+  opacity: 25%;
+}
+
+.row-1 {
+  height: calc(100% / 6);
+  width: 100%;
+  display: flex;
+  opacity: 100%;
+}
+
+.middle {
+  height: calc(100% / 6);
+  width: 100%;
+  display: flex;
+  opacity: 25%;
+}
+
+.middle-1 {
+  height: calc(100% / 6);
+  width: 100%;
+  display: flex;
+  opacity: 100%;
+}
+.bottom {
+  height: calc(100% / 6);
+  width: 100%;
+  display: flex;
+  opacity: 100%;
+}
+.box {
+  height: 100%;
+  width: 25%;
+  opacity: 100%;
+}
+
+.box-3 {
+  height: 100%;
+  width: 25%;
+  opacity: 100%;
+}
+
+.box-7 {
+  height: 100%;
+  width: 25%;
+  opacity: 100%;
+  z-index: 100;
+}
+
+.mappy {
+  height: 100%;
+  width: 25%;
+  opacity: 100%;
+  z-index: 100;
+  position: relative;
+}
+
+.corner-img {
+  position: absolute;
+  right: -230px; /* moves more left from the edge */
+  top: 48%; /* moves it slightly down */
+  transform: translateY(-50%);
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+.box-1 {
+  height: 5%;
+  width: 5%;
+  opacity: 100%;
+}
+
+.hidden-letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+#darkness {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 200px at var(--x, 50%) var(--y, 50%),
+    transparent 0%,
+    rgba(0, 0, 0, 0.95) 80%
+  );
+  transition: background 0.05s linear;
+
+  background: radial-gradient(
+    circle var(--size, 200px) at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.9) 80%
+  );
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body {
+  position: relative;
+  z-index: 1; /* keep content below the close button */
+  display: block;
+  width: 80%;
+  height: 70%;
+  background-color: black;
+  background-image: url("images/modal.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal,
+.modal-body,
+.close {
+  cursor: auto;
+}
+
+.close {
+  position: absolute; /* relative to the viewport because modal fills screen */
+  top: calc(50% - 35%); /* move close button to top edge of modal */
+  left: calc(50% + 40% - 60px); /* move it to right edge of modal */
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.close img {
+  width: 80px; /* bigger size */
+  height: auto;
+  display: block;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.col {
+  height: 100%;
+  width: calc(100% / 3);
+  display: block;
+}
+
+.toprow {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  background-image: url("images/benjamins.PNG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.botrow {
+  height: 40%;
+  width: 100%;
+}
+/* control your content */
+.center-content {
+  align-items: center;
+  justify-content: center;
+}
+
+.center-content-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-height: 75%;
+  max-width: 75%;
+}
+
+@media only screen and (max-width: 600px) {
+  .middle {
+    height: 80%;
+    width: 100%;
+    display: block;
+  }
+  .box {
+    height: 25%;
+    width: 100%;
+  }
+  .top {
+    height: 10%;
+    width: 100%;
+  }
+  .bottom {
+    height: 10%;
+    width: 100%;
+  }
+}
+
+.green {
+  background-color: #008d24;
+}
+
+.blue {
+  background-color: #0b69c0;
+}
+
+.purple {
+  background-color: #3a246d;
+}
+.red {
+  background-color: #ca1b22;
+}
+.orange {
+  background-color: orangered;
+}
+
+.grey {
+  background-color: #d3d3d3;
+}
+.dark-grey {
+  background-color: #a9a9a9;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.hidden-number {
+  height: 80px;
+  max-width: none !important;
+  max-height: none !important;
+  opacity: 0; /* start hidden */
+  transition: 0.3s ease, filter 0.3s ease;
+  filter: brightness(1) saturate(1);
+  cursor: pointer;
+  image-rendering: auto;
+}
+
+.hidden-number::before {
+  content: "";
+  position: absolute;
+  width: 4000px; /* full hitbox width */
+  height: 4000px; /* full hitbox height */
+  top: -2000px; /* shift hitbox upward */
+  left: -2000px; /* shift hitbox left */
+}
+
+/* When cursor is anywhere in the 400×400 hitbox */
+.hidden-number:hover {
+  opacity: 1;
+  filter: brightness(3) saturate(2) drop-shadow(0 0 20px #00ffff)
+    drop-shadow(0 0 30px #00ffff);
+}
+
+.bringfowards {
+  z-index: 100;
+  position: initial;
+}
+
+/* Modal overlay */
+.modal-map {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+/* Modal content */
+.modal-body-map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("images/map.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Close button */
+.close-map {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #aaaaaa;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.close-map:hover,
+.close-map:focus {
+  color: #000;
+}
+
+/* Individual boxes */
+.cafeteria-map,
+.reactor-map,
+.admin-map,
+.navigation-map,
+.shields-map,
+.communications-map,
+.storage-map,
+.medbay-map,
+.security-map,
+.upper-map,
+.lower-map,
+.electrical-map {
+  position: absolute;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* Specific sizes */
+.cafeteria-map {
+  width: 350px;
+  height: 365px;
+}
+.reactor-map {
+  width: 150px;
+  height: 300px;
+}
+.oxygen-map {
+  width: 120px;
+  height: 120px;
+}
+.admin-map {
+  width: 220px;
+  height: 190px;
+}
+.electrical-map {
+  width: 200px;
+  height: 200px;
+}
+.weapons-map {
+  width: 175px;
+  height: 200px;
+}
+
+.navigation-map {
+  width: 175px;
+  height: 200px;
+}
+
+.shields-map {
+  width: 175px;
+  height: 200px;
+}
+.communications-map {
+  width: 175px;
+  height: 200px;
+}
+.storage-map {
+  width: 250px;
+  height: 300px;
+}
+.medbay-map {
+  width: 175px;
+  height: 200px;
+}
+.security-map {
+  width: 175px;
+  height: 200px;
+}
+.upper-map {
+  width: 175px;
+  height: 200px;
+}
+.lower-map {
+  width: 175px;
+  height: 200px;
+}
+.door-map {
+  width: 400px;
+  height: 200px;
+  top: 550px;
+  right: 1170px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.hitbox {
+  position: fixed; /* full-screen random */
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+
+  /* TEMP: debug
+  background: rgba(0, 255, 0, 0.2);
+  */
+}
+
+.hitbox:hover .hidden-number {
+  opacity: 1;
+  filter: brightness(3) saturate(2) drop-shadow(0 0 20px #00ffff)
+    drop-shadow(0 0 30px #00ffff);
+}
+
+/* Darkness stays above background but doesn't block clicks */
+#darkness {
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Door, map, and note should always be on top */
+#open,
+#doorr,
+#noti {
+  position: relative;
+  z-index: 50;
+}
+/* DEBUG + FORCE THE DOOR TO BE VISIBLE */
+#doorr {
+  position: fixed;
+  width: 400px;
+  height: auto;
+  top: 550px; /* adjust this number */
+  left: 365px; /* adjust this number */
+  z-index: 9; /* always above hitboxes + darkness */
+  cursor: pointer;
+}
+
+#noti {
+  position: fixed;
+  width: 500px !important;
+  height: auto !important;
+  max-height: none !important;
+  max-width: none !important;
+  top: 10px; /* adjust this number */
+  left: 10px; /* adjust this number */
+  z-index: 999; /* always above hitboxes + darkness */
+  cursor: ;
+}
+
+h2 {
+  font-size: 60px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.modal2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#timerText {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  pointer-events: none;
+  text-shadow: 2px 2px 5px black;
+  /* Don't set font-family here so it uses your h2 font */
+}
